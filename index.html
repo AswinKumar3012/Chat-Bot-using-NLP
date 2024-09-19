@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot UI</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:cadetblue;
+}
+
+.chat-container {
+  max-width: 500px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color:cornsilk ;
+  color:black;
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-body {
+  padding: 10px;
+  overflow-y: scroll;
+  max-height: 300px; /* Adjust the height as needed */
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 70%;
+}
+
+.message.user {
+  background-color: #e3f2fd;
+  align-self: flex-start;
+}
+
+.message.bot {
+  background-color: #f5f5f5;
+  align-self: flex-end;
+}
+
+.chat-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color:cornsilk;
+  color:black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:azure;
+}
+
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h1>Chatbot</h1>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <!-- Chat messages will be appended here -->
+      <!-- For example:
+      <div class="message user">Hello!</div>
+      <div class="message bot">Hi there!</div>
+      -->
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Type your message...">
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+</body>
+</html>
